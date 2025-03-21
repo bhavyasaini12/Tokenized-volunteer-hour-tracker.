@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Hour Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Volunteer Hour Tracker</h1>
+        
+        <div id="connect-wallet">
+            <button onclick="connectWallet()">Connect Wallet</button>
+            <p id="wallet-address"></p>
+        </div>
+
+        <div class="card">
+            <h2>Log Hours (Owner Only)</h2>
+            <input type="text" id="volunteerAddress" placeholder="Volunteer Address">
+            <input type="number" id="hours" placeholder="Hours">
+            <button onclick="logHours()">Log Hours</button>
+        </div>
+
+        <div class="card">
+            <h2>Check Volunteer Hours</h2>
+            <input type="text" id="checkAddress" placeholder="Volunteer Address">
+            <button onclick="getHours()">Check Hours</button>
+            <p id="displayHours"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
